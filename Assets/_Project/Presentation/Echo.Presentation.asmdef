@@ -1,0 +1,22 @@
+{
+    "name": "Echo.Presentation",
+    "rootNamespace": "",
+    "references": [
+        "GUID:af36f30cc725e58468ceb51c4a7f82d3",
+        "GUID:892d1e89e9cf6f74f895bb5a11382ae5",
+        "GUID:e23e648a1363bfe40a24c1810e2741e1",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5",
+        "GUID:516a5277b8c3b4f4c8cc86b77b1591ff"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

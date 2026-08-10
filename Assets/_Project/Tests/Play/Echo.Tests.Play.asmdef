@@ -1,0 +1,47 @@
+{
+    "name": "Echo.Tests.Play",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e23e648a1363bfe40a24c1810e2741e1",
+        "GUID:af36f30cc725e58468ceb51c4a7f82d3",
+        "GUID:892d1e89e9cf6f74f895bb5a11382ae5",
+        "GUID:148f442f083d1e14a99cd5d85310061a",
+        "GUID:c98a58a6bb6089e489d0c69b0adeb89a",
+        "GUID:0c0c715200fbe9344b1e5ecc05a09c74"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [
+        "Android",
+        "Editor",
+        "EmbeddedLinux",
+        "iOS",
+        "Kepler",
+        "LinuxStandalone64",
+        "CloudRendering",
+        "macOSStandalone",
+        "Switch2",
+        "Switch",
+        "PS4",
+        "PS5",
+        "QNX",
+        "tvOS",
+        "WSA",
+        "VisionOS",
+        "WebGL",
+        "WindowsStandalone32",
+        "WindowsStandalone64",
+        "WindowsStandalone32Server",
+        "WindowsStandalone64Server",
+        "GameCoreXboxOne",
+        "XboxOne"
+    ],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

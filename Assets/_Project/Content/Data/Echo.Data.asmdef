@@ -1,0 +1,16 @@
+{
+    "name": "Echo.Data",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e23e648a1363bfe40a24c1810e2741e1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
