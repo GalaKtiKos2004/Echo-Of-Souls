@@ -1,6 +1,6 @@
 {
-    "name": "Echo.Infrastrucrure",
-    "rootNamespace": "",
+    "name": "Echo.Infrastructure",
+    "rootNamespace": "Echo.Infrastructure",
     "references": [
         "GUID:e23e648a1363bfe40a24c1810e2741e1",
         "GUID:892d1e89e9cf6f74f895bb5a11382ae5",

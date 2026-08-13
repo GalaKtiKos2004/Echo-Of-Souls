@@ -1,6 +1,6 @@
 {
-    "name": "NoEngineCode",
-    "rootNamespace": "",
+    "name": "Echo.Domain",
+    "rootNamespace": "Echo.Domain",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

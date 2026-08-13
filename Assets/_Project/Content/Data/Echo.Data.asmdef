@@ -1,6 +1,6 @@
 {
     "name": "Echo.Data",
-    "rootNamespace": "",
+    "rootNamespace": "Echo.Data",
     "references": [
         "GUID:e23e648a1363bfe40a24c1810e2741e1"
     ],

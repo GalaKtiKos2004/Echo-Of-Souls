@@ -1,6 +1,6 @@
 {
     "name": "Echo.Tests.Play",
-    "rootNamespace": "",
+    "rootNamespace": "Echo.Tests.Play",
     "references": [
         "GUID:e23e648a1363bfe40a24c1810e2741e1",
         "GUID:af36f30cc725e58468ceb51c4a7f82d3",
@@ -10,31 +10,7 @@
         "GUID:0c0c715200fbe9344b1e5ecc05a09c74"
     ],
     "includePlatforms": [],
-    "excludePlatforms": [
-        "Android",
-        "Editor",
-        "EmbeddedLinux",
-        "iOS",
-        "Kepler",
-        "LinuxStandalone64",
-        "CloudRendering",
-        "macOSStandalone",
-        "Switch2",
-        "Switch",
-        "PS4",
-        "PS5",
-        "QNX",
-        "tvOS",
-        "WSA",
-        "VisionOS",
-        "WebGL",
-        "WindowsStandalone32",
-        "WindowsStandalone64",
-        "WindowsStandalone32Server",
-        "WindowsStandalone64Server",
-        "GameCoreXboxOne",
-        "XboxOne"
-    ],
+    "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [

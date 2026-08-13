@@ -1,6 +1,6 @@
 {
     "name": "Echo.Presentation",
-    "rootNamespace": "",
+    "rootNamespace": "Echo.Presentation",
     "references": [
         "GUID:af36f30cc725e58468ceb51c4a7f82d3",
         "GUID:892d1e89e9cf6f74f895bb5a11382ae5",
