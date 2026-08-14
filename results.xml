@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Passed" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0,0527515">
+  <test-suite type="TestSuite" id="1000" name="EchoOfSouls" fullname="EchoOfSouls" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.052752" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1007" name="Echo.Tests.Domain.dll" fullname="C:/Users/KKiri/Documents/Github/Echo-Of-Souls/Library/ScriptAssemblies/Echo.Tests.Domain.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.040346" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="17840" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1008" name="Echo" fullname="Echo" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.039499" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1009" name="Tests" fullname="Echo.Tests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.039211" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1010" name="Domain" fullname="Echo.Tests.Domain" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.038953" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1011" name="Common" fullname="Echo.Tests.Domain.Common" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.038707" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1001" name="EntityIdTests" fullname="Echo.Tests.Domain.Common.EntityIdTests" classname="Echo.Tests.Domain.Common.EntityIdTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.037669" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1006" name="Default_IsNone" fullname="Echo.Tests.Domain.Common.EntityIdTests.Default_IsNone" methodname="Default_IsNone" classname="Echo.Tests.Domain.Common.EntityIdTests" runstate="Runnable" seed="2018999915" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.012432" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1003" name="DifferentValue_AreNotEqual" fullname="Echo.Tests.Domain.Common.EntityIdTests.DifferentValue_AreNotEqual" methodname="DifferentValue_AreNotEqual" classname="Echo.Tests.Domain.Common.EntityIdTests" runstate="Runnable" seed="1302886720" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.005251" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1005" name="Empty_Throws" fullname="Echo.Tests.Domain.Common.EntityIdTests.Empty_Throws" methodname="Empty_Throws" classname="Echo.Tests.Domain.Common.EntityIdTests" runstate="Runnable" seed="856961267" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.003550" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1002" name="SameValue_AreEqual" fullname="Echo.Tests.Domain.Common.EntityIdTests.SameValue_AreEqual" methodname="SameValue_AreEqual" classname="Echo.Tests.Domain.Common.EntityIdTests" runstate="Runnable" seed="365487313" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.000233" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1004" name="SameValue_ShareHashCode" fullname="Echo.Tests.Domain.Common.EntityIdTests.SameValue_ShareHashCode" methodname="SameValue_ShareHashCode" classname="Echo.Tests.Domain.Common.EntityIdTests" runstate="Runnable" seed="766345011" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.000833" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1014" name="Unity.Addressables.DocExampleCode.Editor.Tests.dll" fullname="C:/Users/KKiri/Documents/Github/Echo-Of-Souls/Library/ScriptAssemblies/Unity.Addressables.DocExampleCode.Editor.Tests.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.002192" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="17840" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1015" name="AddressableAssets" fullname="AddressableAssets" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.001538" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1016" name="DocExampleCode" fullname="AddressableAssets.DocExampleCode" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.001290" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1012" name="TestStub" fullname="AddressableAssets.DocExampleCode.TestStub" classname="AddressableAssets.DocExampleCode.TestStub" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.001008" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1013" name="RequiredTest" fullname="AddressableAssets.DocExampleCode.TestStub.RequiredTest" methodname="RequiredTest" classname="AddressableAssets.DocExampleCode.TestStub" runstate="Runnable" seed="1262674754" result="Passed" start-time="2026-08-14 13:57:06Z" end-time="2026-08-14 13:57:06Z" duration="0.000337" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/KKiri/AppData/LocalLow/DefaultCompany/EchoOfSouls\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

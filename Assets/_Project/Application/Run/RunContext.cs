@@ -1,13 +1,8 @@
 ﻿using System;
+using Echo.Domain.Common;
 
 namespace Echo.Application.Run
 {
-    public enum Alignment
-    {
-        Light,
-        Dark
-    }
-
     public class RunContext : IDisposable
     {
         public string Id { get; }
