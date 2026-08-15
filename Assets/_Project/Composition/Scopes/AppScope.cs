@@ -2,6 +2,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 using Echo.Application.Session;
+using Echo.Domain._Project.Domain.Events;
 
 namespace Echo.Composition
 {
@@ -26,6 +27,7 @@ namespace Echo.Composition
         protected override void Configure(IContainerBuilder builder)
         {
             builder.Register<SessionContext>(Lifetime.Singleton);
+            builder.Register<IEventBus, EventBus>(Lifetime.Singleton);
             builder.RegisterEntryPoint<AppScopeProbe>();
             builder.RegisterEntryPoint<BootEntryPoint>();
         }

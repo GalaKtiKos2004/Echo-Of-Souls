@@ -6,6 +6,7 @@ using NUnit.Framework;
 using System.Collections;
 using Echo.Application.Run;
 using Echo.Application.Session;
+using Echo.Domain._Project.Domain.Events;
 
 namespace Echo.Tests.Play._Project.Tests.Play
 {
@@ -16,7 +17,11 @@ namespace Echo.Tests.Play._Project.Tests.Play
         [SetUp]
         public void Setup()
         {
-            _app = LifetimeScope.Create(b => b.Register<SessionContext>(Lifetime.Singleton));
+            _app = LifetimeScope.Create(b =>
+            {
+                b.Register<SessionContext>(Lifetime.Singleton);
+                b.Register<IEventBus, EventBus>(Lifetime.Singleton);
+            });
         }
 
         [TearDown]
@@ -59,6 +64,22 @@ namespace Echo.Tests.Play._Project.Tests.Play
             
             Assert.IsTrue(run.IsDisposed, "RunContext пережил свою область");
             Assert.AreSame(session, _app.Container.Resolve<SessionContext>(), "SessionContext не должен пересоздаваться");
+        }
+
+        [UnityTest]
+        public IEnumerator EventBus_IsSharedAcrossScopes()
+        {
+            var gameplay = _app.CreateChild(b => { });
+            var region = gameplay.CreateChild(b => { });
+            
+            var busFromApp = _app.Container.Resolve<IEventBus>();
+            var busFromRegion = region.Container.Resolve<IEventBus>();
+            
+            Assert.AreSame(busFromApp, busFromRegion);
+
+            Object.DestroyImmediate(region.gameObject);
+            Object.DestroyImmediate(_app.gameObject);
+            yield return null;
         }
     }
 }
