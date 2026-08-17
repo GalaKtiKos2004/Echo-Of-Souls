@@ -17,3 +17,7 @@ namespace Echo.Application.Session
         public void Dispose() => IsDisposed = true;
      }
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
