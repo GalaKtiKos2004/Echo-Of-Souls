@@ -1,0 +1,79 @@
+name: Nightly Build
+
+# ВРЕМЕННЫЙ ПИН ВЕРСИИ (день 13, 2026-08-20):
+# Локальный редактор — 6000.3.21f1 (ADR-001). Образ unityci/editor
+# с модулем windows-mono для линии 6000.3.x ещё не опубликован —
+# самый свежий на сегодня: 6000.0.82f1-windows-mono-3.
+# CI временно собирается на этом образе, редактор проекта не трогаем.
+# Перепроверить hub.docker.com/r/unityci/editor/tags?name=windows-mono
+# на предмет тега 6000.3.x — ориентировочно через 2–3 недели,
+# при появлении заменить customImage ниже или убрать его совсем
+# (тогда unity-builder возьмёт версию из ProjectVersion.txt сам).
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # 02:00 UTC ~ 05:00 МСК
+  workflow_dispatch:
+
+jobs:
+  nightly-windows:
+    name: Nightly build for Windows
+    runs-on: ubuntu-latest
+    steps:
+      - name: Free disk space
+        uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: true
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: false
+          swap-storage: true
+          docker-images: false
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0   # нужен полный лог, чтобы git rev-parse --short HEAD работал предсказуемо
+
+      - name: Cache Library folder
+        uses: actions/cache@v4
+        with:
+          path: Library
+          # платформа — часть ключа: тот же ubuntu-раннер собирает и Linux (build.yml),
+          # и Windows (этот workflow), общий ключ по runner.os их перепутает
+          key: Library-${{ runner.os }}-StandaloneWindows64-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-${{ runner.os }}-StandaloneWindows64-
+
+      - name: Compute build version string
+        id: version
+        run: |
+          echo "value=$(date -u +%Y-%m-%d)-run${{ github.run_number }}-$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          customImage: unityci/editor:6000.0.82f1-windows-mono-3
+          targetPlatform: StandaloneWindows64
+          buildsPath: build
+
+      - name: Package build with version in the name
+        run: |
+          cd build/StandaloneWindows64
+          zip -r "../../EchoOfSouls-nightly-${{ steps.version.outputs.value }}.zip" .
+          # если после первого прогона окажется, что game-ci кладёт билд
+          # в другую подпапку (например build/StandaloneWindows64/EchoOfSouls/) —
+          # поправить путь здесь по факту, не переписывая остальной workflow
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: EchoOfSouls-nightly-${{ steps.version.outputs.value }}
+          path: EchoOfSouls-nightly-${{ steps.version.outputs.value }}.zip
+          retention-days: 14
