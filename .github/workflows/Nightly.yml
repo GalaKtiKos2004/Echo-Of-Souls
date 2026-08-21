@@ -70,3 +70,14 @@ jobs:
           name: EchoOfSouls-nightly-${{ steps.version.outputs.value }}
           path: EchoOfSouls-nightly-${{ steps.version.outputs.value }}.zip
           retention-days: 14
+
+      - name: Setup butler
+        uses: remarkablegames/setup-butler@v3
+
+      - name: Publish to itch.io
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+        run: |
+          butler push build/StandaloneLinux64 \
+            galaktikos/echo-of-souls:linux-nightly \
+            --userversion "${{ steps.version.outputs.value }}"
